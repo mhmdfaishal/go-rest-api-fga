@@ -128,19 +128,19 @@ func (db *InDB) DeletePerson(c *gin.Context) {
 
 	if err != nil {
 		result = gin.H{
-			"result":"Data not found",
+			"result": "Data not found",
 		}
-	} 
-	
+	}
+
 	err = db.DB.Delete(&person).Error
 
 	if err != nil {
 		result = gin.H{
-			"result":"Delete failed",
+			"result": "Delete failed",
 		}
 	} else {
 		result = gin.H{
-			"result":"Data deleted successfully",
+			"result": "Data deleted successfully",
 		}
 	}
 
